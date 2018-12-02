@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"name=viewport content="width = device-width, initial-scale = 1">
+<title>The Bridge Between</title>
+</head>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Tangerine|Dosis");
+
+/*----------BACKGROUNDS------------------*/
+    .parallax1 {
+        /*background-image: url("src/Backgrounds/DirtRoad.jpg");*/
+        background: linear-gradient(rgba(97, 98,116, .5), rgba(97, 98,116, .5)), url("src/Backgrounds/DirtRoad.jpg");
+        background: linear-gradient(rgba(0, 0, 230, 0.35), rgba(255, 174, 88, 0.35)), url("src/Backgrounds/DirtRoad.jpg");
+        background-color: rgb(50, 0, 0);
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0px;
+        border: none;
+    }
+
+.parallax2 {
+	background-image: url("src/Backgrounds/RoosterCloseUp.jpg");
+	min-height: 75%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0px;
+	border: none;
+}
+
+.parallax3 {
+	background-image: url("src/Backgrounds/BackgroundImage.jpg");
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0px;
+	border: none;
+}
+
+/*----------------------------------------*/
+
+button {
+	border: none;
+	
+	border-left: 2px solid rgba(255, 255, 255, 1);
+	
+	outline: none;
+	background-color: rgba(255, 0, 0, 1);
+	color: white;
+	/*padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 7px;
+	padding-top: 7px;*/
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	font-family: 'Courier New';
+	font-size: 25px;
+	font-weight: normal;
+	/*Arial, Helvetica, Times New Roman, Times, Courier New, Courier, Verdana, Georgia, Palatino, Garamond, Bookman, 
+Comic Sans MS, Trebuchet MS, Arial Black, Impact*/
+	margin: 0px 0px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+input {
+	outline: 0;
+	display: inline-block;
+	cursor: pointer;
+}
+
+pTemp {
+	color: white;
+	font-family: 'Courier New';
+	font-size: 25px;
+	font-weight: lighter;
+	margin: 0px 0px;
+	padding: none;
+}
+	
+.logo {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+	
+.imageText {
+	left: 45%;
+	position: absolute;
+	top: 50%;
+}
+
+.textSpace {
+	background: rgba(0, 0, 0, 0);
+}
+
+h1 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 3em;
+}
+
+h2 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 2.25em;
+}
+
+h3 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 1.755em;
+}
+
+h4 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 1.5em;
+}
+
+h5 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 1.245em;
+}
+
+h6 {
+	background-size: cover;
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 1%;
+	font-size: 1.005em;
+}
+
+::-webkit-scrollbar { 
+		width: 1px;
+}
+	
+::-webkit-scrollbar-thumb {
+		background: rgba(255, 0, 0, 1.0);
+		border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-track {
+        /*box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.2);*/
+        /*border-radius: 10px;*/
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        /*background: rgba(255, 0, 0, 1.0);*/
+    }
+
+
+/*----------Quick Links Option 1 enable coordinating div----------*/
+
+/*.tab {
+	width: 10px;
+	height: 30px;
+	color: red;
+}
+
+.tab button {
+	display: inline-block;
+	padding: auto;
+	width: 200px;
+	margin: 0px;
+	transition: 1s;
+	border-bottom: 2px solid white;
+}
+
+.tab button:hover {
+	background-color: rgba(255, 255, 255, 1.0);
+	width: 100%;
+}
+
+.tab:hover {
+	width: 220px;
+}
+
+.tab h4 {
+	border: none;
+	border-left: solid white 2px;
+	font-family: 'Courier New';
+	color: white;
+	font-weight: normal;
+	padding-left: 10px;
+	font-size: 1.5em;
+}*/
+
+/*------------------------------------*/
+
+
+/*----------Quick Links Option 2 enable coordinating div----------*/
+
+    .btn {
+        border: 2px solid rgba(0, 0, 0, 0);
+        /*border-left: 2px solid rgba(255, 255, 255, 1);*/
+        outline: none;
+        background-color: rgba(255, 0, 0, 0);
+        color: white;
+        /*padding: auto;*/ /*"auto" is not valid for padding*/
+        text-align: center;
+        text-decoration: none;
+        width: 220px;
+        height: auto;
+        font-family: 'Courier New';
+        font-size: 18px;
+        font-weight: lighter;
+        margin: 0px 0px;
+        margin-bottom: -2px;
+        cursor: pointer;
+        /*transition: 0.5s ease;*/
+    }
+
+.btn:hover
+{
+	color: black;
+	font-weight: bolder;
+}
+
+.tab {
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+	width: 10px;
+	/*transition: 0.5s ease;*/
+}
+
+.tab:hover {
+	width: 220px;
+	background-color: rgba(255, 255, 255, 1.0);
+	color: cyan;
+}
+
+.tab:hover > .btn {
+	width: 220px;
+}
+
+/*------------------------------------*/
+
+
+/*----------Quick Links Option 3 (icons that expand and turn into buttons when hovered on) enable coordinating div----------*/
+
+/*------------------------------------*/
+
+.socMedia {
+	max-width: 2%;
+	max-height: 2%;
+	margin: 1px;
+	/*display: block;*/
+	margin-bottom: 1px;
+	/*EVENTUALLY MAKE ICONS GRAYSCALE AND COLORIZE WHEN HOVERED OVER*/
+}
+
+.btnAndBckgrnd
+{
+  /*background: url(src\Icons\HorseShoe3.png);*/
+  background-size: 100px 82px;
+}
+
+.login-bg
+{
+	background: linear-gradient(rgba(97, 98 ,116 , .5), rgba(97, 98 ,116 , .5)), url("");
+}
+
+
+</style>
+
+<body style = "margin: 0px; border: none; background: rgba(25, 25, 25, 1.0)">
+
+<!--<div id = "mainText" class = "textSpace" style = "background-color: rgba(0, 0, 0, 0); font-family: 'Calibri'">-->
+<!--<a href = "https://www.youtube.com">Home</a>-->
+<!--<input style = "font-family: Calibri" type = "checkBox" name = "hello" value = "hi"></input>-->
+
+<div class = "parallax1" align = "center">
+
+<br>
+<br>
+<br>
+
+<!--Put elements' tags on same line to remove spacing between them. Ex.:-->
+<div id = "menuButtons" align = "center" width = "75%" >
+<button style = "border-left-color: rgba(0, 0, 0, 0)"
+id = "1" onclick = "message('Please enter a URL or location.')" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">Home</button><button 
+id = "2" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">Apply Now</button><button 
+id = "3" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">About Us</button><button 
+id = "4" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">Map</button><button 
+id = "5" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">Links</button><button 
+id = "6" onmouseenter = "buttonHover(this)" onmouseleave = "buttonExit(this)">FAQs</button>
+</div>
+
+<br>
+<br>
+
+<div>
+
+<!--2396 × 1958-->
+<!--<button><img src = "src\Icons\HorseShoe2.png" align = "middle" style = "width: 59.9px; height: 48.95px;">Hello</button>-->
+<!--<img src = "src\Icons\HorseShoe2.png" width = "60" height = "49" align = "middle">-->
+<!--<button>Home</button>-->
+
+</div>
+
+</div>
+
+<img tag = "logo" src = "src/Icons/HorseShoe2.png" style = "width: 15%; height: 26%; position: absolute; right: 0; top: 0">
+
+<h4 style = "border: 1px solid cyan">Hellllo People</h4>
+
+<!----------Quick Links Option 1 enable coordinating styles---------->
+
+<!--<div id = "quickLinks">
+
+<h4 style = "width: 500px; margin-bottom: 10px;">Quick Links</h4>
+
+<div id = "tabs" class = "tab">
+<button>What We Do</button>
+<button>Map</button>
+<button>Other Organizations</button>
+<button>How to Apply</button>
+<button>Contact Us</button>
+</div>
+
+</div>-->
+<!------------------------------------------------------------------->
+
+
+<!----------Quick Links Option 2 enable coordinating styles---------->
+
+<div id = "quickLinks">
+
+<h4 style = "margin-top: 5px; margin-bottom: 10px">Quick Links</h4>
+
+<div class = "tab" width = "10px">
+<button class = "btn">What We Do</button>
+</div>
+
+<div class = "tab" width = "10px">
+<button class = "btn">Map</button>
+</div>
+
+<div class = "tab" width = "10px">
+<button class = "btn">Other Organizations</button>
+</div>
+
+<div class = "tab" width = "10px">
+<button class = "btn">How to Apply</button>
+</div>
+
+<!--<div class = "tab" width = "10px" style = "margin-bottom: 20px;">-->
+<div class = "tab" width = "10px">
+<button class = "btn">Contact Us</button>
+
+</div>
+
+<div id = "socialMedia" style = "margin: 8px 7px">
+<img id = "facebook" class = "socMedia" src = "src/icons/Facebook.webp"><img 
+id = "snapchat" class = "socMedia" src = "src/icons/Snapchat.webp"><img 
+id = "instagram" class = "socMedia" src = "src/icons/Instagram.webp"><img 
+id = "youTube" class = "socMedia" src = "src/icons/YouTube.webp">
+</div>
+
+</div>
+<!------------------------------------------------------------------->
+                                                                      
+                                                                      
+<!----------Quick Links Option 3 (icons that expand and turn into buttons when hovered on) enable coordinating styles---------->
+                                                                      
+<!------------------------------------------------------------------->
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<br>
+<br>
+<br>
+<br>
+
+<div>
+<h1>Hi.</h1>
+</div>
+
+<a href="#mapHeader">Link.</a>
+
+<div class = "parallax2">
+</div>
+
+<div>
+<h1>Hi.</h1>
+</div>
+
+<div class = "parallax3">
+</div>
+
+
+<h1 id = "mapHeader">Map</h1>
+
+<iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.4216820855954!2d-83.99823118502113!3d33.827234380667804!2m3!1f0!2f0!3f0!3m2!1i1024
+!2i768!4f13.1!3m3!1m2!1s0x88f5b75fda3b01fd%3A0x8133492986a06181!2sThe+Bridge+Between+Inc!5e0!3m2!1sen!2sus!4v1530254832990" width = "100%" height = "600" 
+frameborder="0" style="border:0" allowfullscreen>
+<!--allowfullscreen ??-->
+</iframe>
+
+<!--Remember to try to control how much a single scroll on mid. mouse wheel scrolls screen so the different background images 
+can line up better on screen. (ex. so rooster bckgrnd can be scrolled to and the top of the image can line up with top of screen)-->
+
+</body>
+
+<script>
+function buttonHover(element)
+{
+	element.style.backgroundColor = "rgba(255, 0, 0, .4)";
+}
+
+function buttonExit(element)
+{
+	element.style.backgroundColor = "rgba(0, 0, 0, 0)";
+}
+
+function message(text)
+{
+	alert(text);
+}
+</script>
+
+</html>
